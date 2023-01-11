@@ -3,6 +3,7 @@ package main
 import (
 	"net/http"
 	"github.com/gin-gonic/gin"
+	"fmt"
 )
 
 func main() {
@@ -14,6 +15,7 @@ func main() {
 			"echo": echo,
 		})
 	})
+	fmt.Println("Running on /echo:echo and /health-check")
 	router.Run()
 }
 

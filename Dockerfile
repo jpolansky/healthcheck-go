@@ -1,6 +1,6 @@
 FROM golang:1.20rc2-bullseye
 
-RUN go install github.com/jpolansky/healthcheck-go@master
+RUN go install github.com/jpolansky/healthcheck-go@3c10d10f5
 
 ENV GO1111MODULE=on
 ENV GOFLAGS=-mod=vendor

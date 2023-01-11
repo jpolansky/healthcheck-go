@@ -8,7 +8,13 @@ import (
 func main() {
 	router := gin.Default()
 	router.GET("/health-check",healthCheck)
-	router.Run("localhost:8080")
+	router.GET("/echo/:echo", func(c *gin.Context) {
+		echo := c.Param("echo")
+		c.JSON(http.StatusOK, gin.H{
+			"echo": echo,
+		})
+	})
+	router.Run()
 }
 
 func healthCheck(c *gin.Context) {

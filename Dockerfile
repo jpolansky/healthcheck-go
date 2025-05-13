@@ -1,4 +1,4 @@
-FROM golang:1.20rc2-bullseye
+FROM golang:1.24.3-bullseye
 
 RUN go install github.com/jpolansky/healthcheck-go@3c10d10f5
 
